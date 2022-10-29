@@ -58,7 +58,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(8)
         self.varasto.ota_varastosta(2)
         # varastossa pitäisi olla tilaa 10 - 8 + 2 eli 4
-        self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 0)
+        self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 4)
 
     def test_tostring(self):
         self.assertEqual(str(self.varasto), "saldo = 0, vielä tilaa 10")
